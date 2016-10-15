@@ -1,0 +1,38 @@
+<div ng-controller="EnvPanelCtrl as selectpickerVm">
+	<form class="form-horizontal">
+	  <div class="form-group">
+		<label for="projName" class="col-sm-2 control-label">Project Name</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="projName" placeholder="Project Name">
+		</div>
+	  </div>
+	  <div class="form-group">
+		<label for="projDesc" class="col-sm-2 control-label">Project Description</label>
+		<div class="col-sm-10">
+		  <input type="text" class="form-control" id="projDesc" placeholder="Project Description">
+		</div>
+	  </div>
+	  <div class="form-group input-demo radio-demo row">
+		<label class="col-sm-2 control-label">Active</label>
+		<div class="col-sm-10">
+			<div class="col-md-4">
+		  <label class="radio-inline custom-radio nowrap">
+			<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+			<span>Yes</span>
+		  </label>
+		</div>
+		<div class="col-md-4">
+		  <label class="radio-inline custom-radio nowrap">
+			<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+			<span>No</span>
+		  </label>
+		</div>
+		</div>
+	</div>
+	  <div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+		  <button type="submit" class="btn btn-warning">Save</button>
+		</div>
+	  </div>
+	</form>
+</div>

@@ -1,0 +1,30 @@
+<div ng-controller="EnvPanelCtrl as selectpickerVm">
+	<form class="form-horizontal">
+	  <div class="form-group">
+		<label for="projectName" class="col-sm-2 control-label">Project</label>
+		<div class="col-sm-10">
+			<select class="form-control selectpicker" selectpicker id="projectName" title="Select Project Name"
+					ng-model="selectpickerVm.standardSelected"
+					ng-options="item as item.label for item in selectpickerVm.standardSelectItems">
+			</select>
+		</div>
+	  </div>
+	  <div class="form-group">
+		<label for="envName" class="col-sm-2 control-label">Environment</label>
+		<div class="col-sm-10">
+		  <input type="text" class="form-control" id="envName" placeholder="Environment">
+		</div>
+	  </div>
+	  <div class="form-group">
+		<label for="logFilePath" class="col-sm-2 control-label">Log Path</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="envName" placeholder="Log File Path">
+		</div>
+	</div>
+	  <div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+		  <button type="submit" class="btn btn-warning">Save</button>
+		</div>
+	  </div>
+	</form>
+</div>

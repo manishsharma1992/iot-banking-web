@@ -1,0 +1,45 @@
+<div ng-controller="RuleActionSelectpickerPanelCtrl as selectpickerVm">
+	<form class="form-horizontal">
+	  <div class="form-group">
+		<label for="ruleName" class="col-sm-2 control-label">Rule Name</label>
+		<div class="col-sm-10">
+		  <input type="text" class="form-control" id="ruleName" placeholder="Rule Name">
+		</div>
+	  </div>
+	  <div class="form-group">
+		<label for="ruleRegex" class="col-sm-2 control-label">Expression</label>
+		<div class="col-sm-10">
+		  <input type="text" class="form-control" id="ruleRegex" placeholder="Regular Expression">
+		</div>
+	  </div>
+	  <div class="form-group">
+		<label for="ruleActionType" class="col-sm-2 control-label">Action Type</label>
+		<div class="col-sm-10">
+			<select class="form-control selectpicker" selectpicker id="ruleActionType" title="Select Action Type"
+					ng-model="selectpickerVm.standardSelected"
+					ng-options="item as item.label for item in selectpickerVm.standardSelectItems">
+			</select>
+		</div>
+	  </div>
+	  <div class="form-group">
+		<label for="ruleRegex1" class="col-sm-2 control-label">URL</label>
+		<div class="col-sm-10">
+		  <input type="text" class="form-control" id="ruleRegex" placeholder="URL">
+		</div>
+	  </div>
+	  <div class="form-group">
+		<label for="ruleLogFile" class="col-sm-2 control-label">Log</label>
+		<div class="col-sm-10">
+			<select class="form-control" id= "ruleLogFile" title="Select Environment Log" multiple selectpicker
+				ng-model="selectpickerVm.multipleSelectedItems"
+				ng-options="item as item.label for item in selectpickerVm.envLogFileSelect">
+			</select>
+		</div>
+	</div>
+	  <div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+		  <button type="submit" class="btn btn-warning">Save</button>
+		</div>
+	  </div>
+	</form>
+</div>
