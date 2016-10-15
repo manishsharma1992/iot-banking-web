@@ -1,0 +1,51 @@
+<div class="horizontal-scroll">
+  <div class="form-group select-page-size-wrap ">
+    <label>Rows on page
+      <select class="form-control selectpicker show-tick" title="Rows on page" selectpicker
+              ng-model="exceptionTablePageSize" ng-options="i for i in [5,10,15,20,25]">
+      </select>
+    </label>
+  </div>
+  <table class="table" st-table="exceptionTableData">
+    <thead>
+    <tr class="sortable ">
+      <th class="table-id" st-sort="id" st-sort-default="true">#</th>
+      <th st-sort="exceptionName">Exception Name</th>
+      <th st-sort="exceptionDesc">Exception Desc</th>
+      <th st-sort="time">Time Logged</th>
+      <th st-sort="status">Status</th>
+      <th st-sort="handledBy">Handled By</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th><input st-search="exceptionName" placeholder="Search Exception Name" class="input-sm form-control search-input"
+                 type="search"/></th>
+      <th><input st-search="exceptionDesc" placeholder="Search Exception Desc" class="input-sm form-control search-input"
+                 type="search"/></th>
+      <th><input st-search="time" placeholder="Search Time" class="input-sm form-control search-input"
+                 type="search"/></th>
+      <th><input st-search="status" placeholder="Search status" class="input-sm form-control search-input" type="search"/>
+      </th>
+      <th><input st-search="handledBy" placeholder="Search Handled By" class="input-sm form-control search-input" type="search"/>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in exceptionTableData">
+      <td class="table-id">{{item.id}}</td>
+      <td>{{item.exceptionName}}</td>
+      <td>{{item.exceptionDesc}}</td>
+      <td>{{item.time}}</td>
+      <td>{{item.status}}</td>
+      <td>{{item.handledBy}}</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+      <td colspan="6" class="text-center">
+        <div st-pagination="" st-items-by-page="exceptionTablePageSize" st-displayed-pages="5"></div>
+      </td>
+    </tr>
+    </tfoot>
+  </table>
+</div>
